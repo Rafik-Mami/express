@@ -1,0 +1,31 @@
+html 
+head 
+
+style
+            include ../public/style/contact.css
+title contact 
+body 
+ul
+  li
+    a(href='/') Home
+  li
+    a(href='services') services
+  li
+    a(href='contact') Contact
+
+h3 Contact Form
+.container
+  form(action='/action_page.php')
+    label(for='fname') First Name
+    input#fname(type='text' name='firstname' placeholder='Your name..')
+    label(for='lname') Last Name
+    input#lname(type='text' name='lastname' placeholder='Your last name..')
+    label(for='country') Country
+    select#country(name='country')
+      option(value='australia') Australia
+      option(value='canada') Canada
+      option(value='usa') USA
+    label(for='subject') Subject
+    textarea#subject(name='subject' placeholder='Write something..' style='height:200px')
+    input(type='submit' value='Submit')
+
